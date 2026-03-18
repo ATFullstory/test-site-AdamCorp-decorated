@@ -32,125 +32,143 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo">AdamCorp</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header data-section="site-header">
+        <div class="logo" data-id="logo">AdamCorp</div>
+        <nav data-component="navigation" data-id="main-nav">
+            <ul data-id="nav-list">
+                <li><a href="#home"     data-component="link" data-id="home"     data-position="1">Home</a></li>
+                <li><a href="#features" data-component="link" data-id="features" data-position="2">Features</a></li>
+                <li><a href="#about"    data-component="link" data-id="about-us" data-position="3">About Us</a></li>
+                <li><a href="#contact"  data-component="link" data-id="contact"  data-position="4">Contact</a></li>
             </ul>
         </nav>
-        <a href="signup.html" class="cta-header">Sign Up</a>
+        <a href="signup.html" class="cta-header" data-component="button" data-id="sign-up">Sign Up</a>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <h1>Innovative Solutions for a Modern World</h1>
-            <p>A short, compelling tagline to introduce the product or service.</p>
-            <button class="cta-primary">Get Started Today</button>
+
+        <section id="home" class="hero" data-section="hero">
+            <h1 data-id="hero-headline">Innovative Solutions for a Modern World</h1>
+            <p data-id="hero-tagline">A short, compelling tagline to introduce the product or service.</p>
+            <button class="cta-primary" data-component="button" data-id="get-started">Get Started Today</button>
         </section>
 
-        <section id="features" class="section-padded">
-            <h2>Our Core Features</h2>
-            <div class="feature-grid">
-                <article class="feature-card">
-                    <h3>Feature Title One</h3>
-                    <p>Detailed description of the first feature. Great for hover effects.</p>
+        <section id="features" class="section-padded" data-section="features">
+            <h2 data-id="section-title">Our Core Features</h2>
+            <div class="feature-grid" data-id="feature-list">
+                <article class="feature-card" data-component="card" data-id="feature-title-one" data-position="1">
+                    <h3 data-id="card-title">Feature Title One</h3>
+                    <p data-id="card-description">Detailed description of the first feature. Great for hover effects.</p>
                 </article>
-                <article class="feature-card">
-                    <h3>Feature Title Two</h3>
-                    <p>Detailed description of the second feature. Try adding a simple animation.</p>
+                <article class="feature-card" data-component="card" data-id="feature-title-two" data-position="2">
+                    <h3 data-id="card-title">Feature Title Two</h3>
+                    <p data-id="card-description">Detailed description of the second feature. Try adding a simple animation.</p>
                 </article>
-                <article class="feature-card">
-                    <h3>Feature Title Three</h3>
-                    <p>Detailed description of the third feature. Practice CSS transitions.</p>
+                <article class="feature-card" data-component="card" data-id="feature-title-three" data-position="3">
+                    <h3 data-id="card-title">Feature Title Three</h3>
+                    <p data-id="card-description">Detailed description of the third feature. Practice CSS transitions.</p>
                 </article>
             </div>
         </section>
 
-        <section id="about" class="section-padded bg-light">
-            <h2>What Our Clients Say</h2>
-            <blockquote class="testimonial">
+        <section id="about" class="section-padded bg-light" data-section="testimonials">
+            <h2 data-id="section-title">What Our Clients Say</h2>
+            <blockquote class="testimonial" data-component="card" data-id="jane-doe-testimonial" data-position="1">
                 "The best platform we've ever used. It significantly boosted our productivity."
-                <footer>— Jane Doe, Tech CEO</footer>
+                <footer data-id="attribution">— Jane Doe, Tech CEO</footer>
             </blockquote>
         </section>
 
-        <section id="faq" class="section-padded">
-            <h2>Frequently Asked Questions</h2>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-btn">
+        <section id="faq" class="section-padded" data-section="faq">
+            <h2 data-id="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" data-id="faq-list">
+                <div class="accordion-item"
+                    data-component="accordion"
+                    data-id="what-makes-platform-different"
+                    data-position="1"
+                    data-state="collapsed">
+                    <button class="accordion-btn" data-component="button" data-id="accordion-trigger">
                         What makes this platform different from others?
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-id="accordion-content">
                         <p>Our platform is built with performance and simplicity in mind. Unlike other solutions, we focus on delivering a seamless experience without unnecessary complexity — so your team can focus on what actually matters.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-btn">
+                <div class="accordion-item"
+                    data-component="accordion"
+                    data-id="how-quickly-get-started"
+                    data-position="2"
+                    data-state="collapsed">
+                    <button class="accordion-btn" data-component="button" data-id="accordion-trigger">
                         How quickly can I get started?
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-id="accordion-content">
                         <p>Most users are up and running within minutes. Our onboarding process is straightforward, and our documentation covers everything you need from initial setup through to advanced configuration.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-btn">
+                <div class="accordion-item"
+                    data-component="accordion"
+                    data-id="is-there-support-available"
+                    data-position="3"
+                    data-state="collapsed">
+                    <button class="accordion-btn" data-component="button" data-id="accordion-trigger">
                         Is there support available if I run into issues?
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-id="accordion-content">
                         <p>Absolutely. We offer dedicated support via our help centre, live chat, and email. Our team typically responds within a few hours, and our community forum is active around the clock.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <button class="accordion-btn">
+                <div class="accordion-item"
+                    data-component="accordion"
+                    data-id="can-i-upgrade-or-change-plan"
+                    data-position="4"
+                    data-state="collapsed">
+                    <button class="accordion-btn" data-component="button" data-id="accordion-trigger">
                         Can I upgrade or change my plan at any time?
                         <span class="accordion-icon">+</span>
                     </button>
-                    <div class="accordion-content">
+                    <div class="accordion-content" data-id="accordion-content">
                         <p>Yes, plans are fully flexible. You can upgrade, downgrade, or cancel at any time from your account settings. Changes take effect immediately, and any unused credit is automatically applied to your next billing cycle.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section-padded">
-            <h2>Get In Touch</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit" class="cta-primary">Send Message</button>
+        <section id="contact" class="section-padded" data-section="contact">
+            <h2 data-id="section-title">Get In Touch</h2>
+            <form id="contact-form" data-component="form" data-id="contact-form">
+                <input type="text"   placeholder="Your Name"    required data-id="name-input">
+                <input type="email"  placeholder="Your Email"   required data-id="email-input">
+                <textarea placeholder="Your Message" data-id="message-input"></textarea>
+                <button type="submit" class="cta-primary" data-component="button" data-id="send-message">Send Message</button>
             </form>
         </section>
+
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press</a></li>
+    <footer data-section="site-footer">
+        <div class="footer-links" data-id="footer-links">
+            <div class="footer-col" data-component="navigation" data-id="company-nav">
+                <h4 data-id="nav-title">Company</h4>
+                <ul data-id="nav-list">
+                    <li><a href="#" data-component="link" data-id="about"    data-position="1">About</a></li>
+                    <li><a href="#" data-component="link" data-id="careers"  data-position="2">Careers</a></li>
+                    <li><a href="#" data-component="link" data-id="press"    data-position="3">Press</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+            <div class="footer-col" data-component="navigation" data-id="support-nav">
+                <h4 data-id="nav-title">Support</h4>
+                <ul data-id="nav-list">
+                    <li><a href="#" data-component="link" data-id="help-center"      data-position="1">Help Center</a></li>
+                    <li><a href="#" data-component="link" data-id="privacy-policy"   data-position="2">Privacy Policy</a></li>
+                    <li><a href="#" data-component="link" data-id="terms-of-service" data-position="3">Terms of Service</a></li>
                 </ul>
             </div>
         </div>
-        <div class="copyright">
+        <div class="copyright" data-id="copyright">
             <p>&copy; 2026 Coding Test Project. All Rights Reserved.</p>
         </div>
     </footer>

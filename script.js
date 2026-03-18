@@ -13,10 +13,14 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
         const item = btn.closest('.accordion-item');
         const isOpen = item.classList.contains('open');
 
-        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+        document.querySelectorAll('.accordion-item').forEach(i => {
+            i.classList.remove('open');
+            i.setAttribute('data-state', 'collapsed');
+        });
 
         if (!isOpen) {
             item.classList.add('open');
+            item.setAttribute('data-state', 'expanded');
             const questionText = btn.textContent.replace(/[+×]/g, '').trim();
             fsEvent('Accordion Opened', { question: questionText });
         }

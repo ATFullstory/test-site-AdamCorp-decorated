@@ -32,64 +32,80 @@
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">AdamCorp</a>
-        <nav>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#features">Features</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+    <header data-section="site-header">
+        <a href="index.html" class="logo" data-id="logo">AdamCorp</a>
+        <nav data-component="navigation" data-id="main-nav">
+            <ul data-id="nav-list">
+                <li><a href="index.html#home"     data-component="link" data-id="home"     data-position="1">Home</a></li>
+                <li><a href="index.html#features" data-component="link" data-id="features" data-position="2">Features</a></li>
+                <li><a href="index.html#about"    data-component="link" data-id="about-us" data-position="3">About Us</a></li>
+                <li><a href="index.html#contact"  data-component="link" data-id="contact"  data-position="4">Contact</a></li>
             </ul>
         </nav>
-        <a href="index.html" class="cta-header">Back to Home</a>
+        <a href="index.html" class="cta-header" data-component="button" data-id="back-to-home">Back to Home</a>
     </header>
 
-    <main class="signup-main">
-        <div class="signup-card">
-            <h1 class="signup-heading">Create Your Account</h1>
-            <p class="signup-subtext">Fill in your details below to get started. No commitment required.</p>
+    <main class="signup-main" data-section="signup">
+        <div class="signup-card" data-component="card" data-id="signup-card">
+            <h1 class="signup-heading" data-id="signup-heading">Create Your Account</h1>
+            <p class="signup-subtext" data-id="signup-subtext">Fill in your details below to get started. No commitment required.</p>
 
-            <form id="signup-form" novalidate>
-                <div class="form-group">
+            <form id="signup-form" novalidate data-component="form" data-id="signup-form">
+
+                <div class="form-group" data-id="full-name-field">
                     <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" placeholder="e.g. Jane Doe" required>
+                    <input type="text" id="full-name" placeholder="e.g. Jane Doe" required data-id="full-name-input">
                 </div>
-                <div class="form-group">
+
+                <div class="form-group" data-id="email-field">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="e.g. jane@example.com" required>
+                    <input type="email" id="email" placeholder="e.g. jane@example.com" required data-id="email-input">
                 </div>
-                <div class="form-group">
+
+                <div class="form-group" data-id="job-title-field">
                     <label for="job-title">Job Title</label>
-                    <input type="text" id="job-title" placeholder="e.g. Product Manager">
+                    <input type="text" id="job-title" placeholder="e.g. Product Manager" data-id="job-title-input">
                 </div>
-                <div class="form-group">
+
+                <div class="form-group" data-id="company-field">
                     <label for="company">Company</label>
-                    <input type="text" id="company" placeholder="e.g. Acme Corp">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Minimum 8 characters" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" placeholder="Repeat your password" required>
+                    <input type="text" id="company" placeholder="e.g. Acme Corp" data-id="company-input">
                 </div>
 
-                <div class="form-checkbox">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                <!-- Password fields excluded from FullStory capture -->
+                <div class="fs-exclude">
+                    <div class="form-group" data-id="password-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Minimum 8 characters" required data-id="password-input">
+                    </div>
+
+                    <div class="form-group" data-id="confirm-password-field">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Repeat your password" required data-id="confirm-password-input">
+                    </div>
                 </div>
 
-                <button type="submit" class="cta-primary signup-submit">Create Account</button>
+                <div class="form-checkbox" data-id="terms-checkbox-field">
+                    <input type="checkbox" id="terms" required data-id="terms-checkbox">
+                    <label for="terms">I agree to the
+                        <a href="#" data-component="link" data-id="terms-of-service">Terms of Service</a>
+                        and
+                        <a href="#" data-component="link" data-id="privacy-policy">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="cta-primary signup-submit" data-component="button" data-id="create-account">Create Account</button>
+
             </form>
 
-            <p class="signup-login-link">Already have an account? <a href="#">Sign in</a></p>
+            <p class="signup-login-link" data-id="sign-in-prompt">Already have an account?
+                <a href="#" data-component="link" data-id="sign-in">Sign in</a>
+            </p>
         </div>
     </main>
 
-    <footer>
-        <div class="copyright">
+    <footer data-section="site-footer">
+        <div class="copyright" data-id="copyright">
             <p>&copy; 2025 Coding Test Project. All Rights Reserved.</p>
         </div>
     </footer>
